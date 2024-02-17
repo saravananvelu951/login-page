@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HOME</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<style>
+  body {
+    background-image: url('https://wallpapercave.com/wp/wp9764022.jpg');
+    background-size: 2000px 2000px;
+
+  }
+
+  #fo {
+    width: 100%;
+    /* Set the width */
+    height: 100%;
+    padding: 90px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    font-size: 15px;
+
+
+
+  }
+
+  #for {
+
+    width: 400px;
+    /* Set the width */
+    height: 350px;
+    /* Set the height */
+    border: 2px solid #8b8a8a;
+    /* Add a solid border */
+    border-radius: 50px 50px 50px 10px;
+    padding: 30px;
+    /* Add some padding inside the border */
+    margin: 70px;
+    background-image: url('https://wallpapercave.com/wp/wp9764022.jpg');
+    background-size: 100% 100%;
+
+  }
+
+  .form-label {
+    color: #f1ebeb
+  }
+
+  .log {
+    color: #f1ebeb
+  }
+
+  @media (max-width: 800px) {
+    #fo {
+      background-image: url('https://wallpapercave.com/wp/wp9764022.jpg');
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .img {
+      width: 450px;
+      height: 400px;
+
+    }
+
+    #form {
+      width: 450px;
+      height: 300px;
+    }
+  }
+</style>
+
+<body>
+  <div class="" id="fo">
+    <img class="img" src="https://u-tor.com/images/manual-testing/manual-testing-1.png" alt="">
+    <div id="for">
+      <h4 class="log fw-bolder text-center">Login Account</h4>
+      <form class="pt-3" name="loginform" onsubmit="return validateForm()" id="form">
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1 fw-bold" class="form-label">Email address</label>
+          <input type="email" class="form-control" name="email" id="exampleInputEmail1" style="width: 300px;"
+            aria-describedby="emailHelp">
+          <div class="mb-3">
+            <label for="exampleInputPassword1 fw-bold" class="form-label">Password</label>
+            <input type="password" name="password" style="width: 300px;" class="form-control"
+              id="exampleInputPassword1">
+          </div>
+          <div id="emailHelp" class="form-label">We'll never share your email with anyone else.</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" title="submit">Login</button>
+      </form>
+    </div>
+  </div>
+  <script>
+    function validateForm() {
+      let x = document.forms["loginform"]["email"].value;
+      if (x == "") {
+        alert("Please enter your email address");
+        return false;
+      }
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
